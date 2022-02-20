@@ -16,7 +16,7 @@
       @stateChange="getNewState"
       ><Counter></Counter>
     </Goods>
-    <p>aaa</p>
+    <p>aaabbb</p>
     <Footer
       :fullState="fullState"
       @full-change="full_change"
