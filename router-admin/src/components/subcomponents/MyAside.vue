@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'MyAside', 
+  name: 'MyAside' 
 }
 </script>
 
