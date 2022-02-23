@@ -15,12 +15,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>xxx</td>
-          <td>xxx</td>
-          <td>xxx</td>
-          <td>xxx</td>
-          <td>xxx</td>
+        <tr v-for="item in userlist" :key=item.id>
+          <td>{{item.id}}</td>
+          <td>P{{item.name}}</td>
+          <td>{{item.age}}</td>
+          <td>{{item.position}}</td>
+          <td>
+            <!-- prevent是阻止默认行为 -->
+            <a href="#" @click.prevent="gotoDetail(item.id)">详情</a>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -39,6 +42,12 @@ export default {
         { id: 3, name: '吕不韦', age: 50, position: '商人' },
         { id: 4, name: '赵姬', age: 48, position: '王太后' }
       ]
+    }
+  },
+  methods:{
+    gotoDetail(id){
+      //编程式API
+      this.$router.push('/home/userinfo/'+id)
     }
   }
 }

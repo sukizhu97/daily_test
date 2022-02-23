@@ -49,7 +49,7 @@ export default {
         //登录成功
         // 存储token到本地
         localStorage.getItem('token','Bearer xxx')
-        // 跳转后台首页
+        // // 跳转后台首页
         this.$router.push('/home')
       }
       else{

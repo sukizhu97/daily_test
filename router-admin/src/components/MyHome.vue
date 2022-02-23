@@ -6,7 +6,7 @@
       <MyAside></MyAside>
       <!-- 右侧主题 -->
       <div class='home-main-body'>
-        123
+        <router-view></router-view>
       </div>
     </div>
   </div>
