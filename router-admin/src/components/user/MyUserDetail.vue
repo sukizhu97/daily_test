@@ -3,7 +3,7 @@
     <button type="button" class="btn btn-light btn-sm" @click="$router.back()">
       后退
     </button>
-    <h4 class="text-center">用户详情_test111</h4>
+    <h4 class="text-center">用户详情_test333</h4>
   </div>
 </template>
 
