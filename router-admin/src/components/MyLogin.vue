@@ -1,10 +1,9 @@
 <template>
   <div class="login-container">
     <div class="login-box">
-
       <!-- 头像区域 -->
       <div class="text-center avatar-box">
-        <img src="../assets/logo.png" class="img-thumbnail avatar" alt="">
+        <img src="../assets/logo.png" class="img-thumbnail avatar" alt="" />
       </div>
 
       <!-- 表单区域 -->
@@ -12,49 +11,63 @@
         <!-- 登录名称 -->
         <div class="form-group form-inline">
           <label for="username">登录名称</label>
-          <input type="text" class="form-control ml-2" id="username" placeholder="请输入登录名称" autocomplete="off" v-model.trim='username'>
+          <input
+            type="text"
+            class="form-control ml-2"
+            id="username"
+            placeholder="请输入登录名称"
+            autocomplete="off"
+            v-model.trim="username"
+          />
         </div>
         <!-- 登录密码 -->
         <div class="form-group form-inline">
           <label for="password">登录密码</label>
-          <input type="password" class="form-control ml-2" id="password" placeholder="请输入登录密码" v-model.trim='password'>
+          <input
+            type="password"
+            class="form-control ml-2"
+            id="password"
+            placeholder="请输入登录密码"
+            v-model.trim="password"
+          />
         </div>
         <!-- 登录和重置按钮 -->
         <div class="form-group form-inline d-flex justify-content-end">
-          <button type="button" class="btn btn-secondary mr-2" @click="reset">重置</button>
-          <button type="button" class="btn btn-primary" @click='login'>登录</button>
+          <button type="button" class="btn btn-secondary mr-2" @click="reset">
+            重置
+          </button>
+          <button type="button" class="btn btn-primary" @click="login">
+            登录
+          </button>
         </div>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MyLogin',
-  data(){
-    return{
-      username:'',
-      password:''
+  name: "MyLogin",
+  data() {
+    return {
+      username: "",
+      password: ""
     }
   },
-  methods:{
-    reset(){
-      this.username = '',
-      this.password = ''
+  methods: {
+    reset() {
+      ;(this.username = ""), (this.password = "")
     },
-    login(){
-      if(this.username === 'admin' && this.password==='666666'){
+    login() {
+      if (this.username === "admin" && this.password === "666666") {
         //登录成功
         // 存储token到本地
-        localStorage.getItem('token','Bearer xxx')
+        localStorage.getItem("token", "Bearer xxx")
         // // 跳转后台首页
-        this.$router.push('/home')
-      }
-      else{
+        this.$router.push("/home")
+      } else {
         //移除token
-        localStorage.removeItem('token')
+        localStorage.removeItem("token")
       }
     }
   }
